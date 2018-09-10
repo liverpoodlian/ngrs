@@ -1,0 +1,28 @@
+{
+  "name": "Project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "browser-sync": "2.23.6",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "4.1.0",
+    "gulp-cache": "1.0.2",
+    "gulp-clean-css": "3.9.2",
+    "gulp-hash": "4.2.2",
+    "gulp-include": "2.3.1",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "3.1.0",
+    "gulp-uglify": "3.0.0",
+    "run-sequence": "2.2.1",
+    "sass-lint": "1.12.1",
+    "stylelint-scss": "3.1.0",
+    "through2": "2.0.3"
+  },
+  "scripts": {
+    "lint-styles": "bash linters/styles",
+    "lint-scripts": "bash linters/scripts"
+  },
+  "author": "Project",
+  "license": "ISC"
+}
