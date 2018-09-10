@@ -9,3 +9,102 @@ main,
 footer {
     overflow-x: hidden;
 }
+
+main {
+	position: relative;
+}
+
+.h1 {
+	@include fontStyle($bebe, 55px, 80px, 700);
+	letter-spacing: 2.75px;
+	text-transform: uppercase;
+	color: $color_4A4B4C;
+}
+
+.h2 {
+	@include fontStyle($bebe, 50px, 50px, 700);
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+	color: $color_4A4B4C;
+	margin-bottom: 40px;
+}
+
+.paragraph {
+	@include fontStyle($pt, 22px, 38px);
+	color: $color_4A4B4C;
+
+	&--italic {
+		font-style: italic;
+	}
+}
+
+.section {
+	max-width: 1400px;
+	@include marginAuto;
+
+	&--main {
+		margin-bottom: 410px;
+
+		&:after {
+			@include before(0, 0);
+			@include backgroundImage("/images/lines-top.png", center);
+			width: 100%;
+			height: 745px;
+			pointer-events: none;
+		}
+
+		.paragraph {
+			margin-top: 35px;
+		}
+	}
+
+	&--about {
+		display: flex;
+		margin-bottom: 180px;
+
+		.section__text {
+			max-width: 315px;
+			margin-right: 215px;
+		}
+	}
+}
+
+.about {
+	display: flex;
+
+	&__item {
+		margin-right: 45px;
+
+		&:last {
+			margin-right: 0;
+		}
+	}
+
+	&__count {
+		@include fontStyle($bebe, 90px, 50px, 300);
+		letter-spacing: 4.5px;
+		color: $color_4A4B4C;
+		margin-bottom: 30px;
+	}
+
+	&__text {
+		@include fontStyle($pt, 19px, 32px);
+		color: $color_4A4B4C;
+	}
+}
+
+.video-top {
+	height: 185px;
+	position: relative;
+	overflow: hidden;
+
+	.light-paints {
+		width: 100%;
+		height: auto;
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: translateY(-50%);
+		z-index: 1;
+	}
+}

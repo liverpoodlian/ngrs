@@ -86,38 +86,46 @@ function removeBuilds(folder, template) {
     });
 }
 
-function buildJs(src, dest, withMessage) {
+function buildJs(src, dest) {
     return gulp.src(src)
         .pipe(include())
             .on('error', console.log)
         .pipe(uglify())
         .pipe(hash({ template: FILE_HASH_TEMPLATE }))
         .pipe(through.obj((chunk, enc, cb) => {
-            const jsFolder = path.resolve(chunk.path, '..');
-            const jsFileName = path.basename(chunk.path);
-            const phpFiles = getPhpFiles(chunk.path, '/js/', FILE.PATH.FOOTER);
+            chunkPath = chunk.path.replace(/\\/g,"/");
+            var jsFolder = path.resolve(chunkPath, '..');
+            var jsFileName = path.basename(chunkPath);
+
+            var phpFile = chunkPath.includes('/js/')
+                ? path.resolve(chunkPath, '../../template/footer-includes.php')
+                : path.resolve(chunkPath, '../index.php');
 
             removeBuilds(jsFolder, JS_FILE_REGEXP_TEMPLATE);
-            changeTemplateFiles(phpFiles, jsFileName, JS_FILE_REGEXP_TEMPLATE, withMessage);
+            changeTemplateFile(phpFile, jsFileName, JS_FILE_REGEXP_TEMPLATE);
             cb(null, chunk);
         }))
         .pipe(gulp.dest(dest))
         .pipe(browserSync.stream());
 }
 
-function buildCss(src, dest, withMessage) {
+function buildCss(src, dest) {
     return gulp.src(src)
         .pipe(sass({ errLogToConsole: true }))
         .pipe(prefixer())
         .pipe(cleanCSS())
         .pipe(hash({ template: FILE_HASH_TEMPLATE }))
         .pipe(through.obj((chunk, enc, cb) => {
-            const cssFolder = path.resolve(chunk.path, '..');
-            const cssFileName = path.basename(chunk.path);
-            const phpFiles = getPhpFiles(chunk.path, '/css/', FILE.PATH.HEADER);
+            chunkPath = chunk.path.replace(/\\/g,"/");
+            var cssFolder = path.resolve(chunkPath, '..');
+            var cssFileName = path.basename(chunkPath);
+
+            var phpFile = chunkPath.includes('/css/')
+                ? path.resolve(chunkPath, '../../template/header-includes.php')
+                : path.resolve(chunkPath, '../index.php');
 
             removeBuilds(cssFolder, CSS_FILE_REGEXP_TEMPLATE);
-            changeTemplateFiles(phpFiles, cssFileName, CSS_FILE_REGEXP_TEMPLATE, withMessage);
+            changeTemplateFile(phpFile, cssFileName, CSS_FILE_REGEXP_TEMPLATE);
             cb(null, chunk);
         }))
         .pipe(gulp.dest(dest))

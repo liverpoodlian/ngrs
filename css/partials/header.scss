@@ -1,0 +1,47 @@
+.header {
+	display: flex;
+	max-width: 1400px;
+	@include marginAuto;
+	padding-top: 50px;
+	margin-bottom: 100px;
+
+	&__left-col,
+	&__right-col {
+		display: flex;
+	}
+
+	&__left-col {
+		width: calc(100% - 350px);
+		flex: 0 0 calc(100% - 350px);
+	}
+
+	&__right-col {
+		width: 270px;
+		flex: 0 0 270px;
+		justify-content: space-between;
+		padding-top: 28px;
+	}
+
+	&__logo {
+		width: 60px;
+		flex: 0 0 60px;
+		height: 92px;
+		@include backgroundImage('/images/logo-header.svg', center);
+		margin-right: 60px;
+	}
+
+	&-menu {
+		margin-top: 28px;
+		display: flex;
+		align-items: flex-start;
+	}
+
+	&-menu__link {
+		display: block;
+		margin-right: 25px;
+
+		&:last {
+			margin-right: 0;
+		}
+	}
+}

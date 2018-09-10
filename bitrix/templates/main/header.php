@@ -16,3 +16,23 @@
 	</head>
 	<body>
 		<?$APPLICATION->ShowPanel();?>
+		<header class="header">
+			<div class="header__left-col">
+				<a href="/" class="header__logo"></a>
+				<nav class="header-menu">
+					<a href="" class="header-menu__link">Главная</a>
+					<a href="" class="header-menu__link">О компании</a>
+					<a href="" class="header-menu__link">Наши сервисы</a>
+					<a href="" class="header-menu__link">Наши проекты</a>
+					<a href="" class="header-menu__link">Рекомендации</a>
+					<a href="" class="header-menu__link">Контакты</a>
+				</nav>
+			</div>
+			<div class="header__right-col">
+				<div class="header__langs">
+					<a href="">ru.</a>
+					<a href="">eng.</a>
+				</div>
+				<a href="tel:+74956467075" class="header__phone">+7 (495) 646-70-75</a>
+			</div>
+		</header>
