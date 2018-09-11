@@ -30,9 +30,10 @@
 			</div>
 			<div class="header__right-col">
 				<div class="header__langs">
-					<a href="">ru.</a>
-					<a href="">eng.</a>
+					<a href="" class="header__lang-item header__lang-item--active">ru.</a>
+					<a href="" class="header__lang-item">eng.</a>
 				</div>
 				<a href="tel:+74956467075" class="header__phone">+7 (495) 646-70-75</a>
 			</div>
 		</header>
+		<main class="content">

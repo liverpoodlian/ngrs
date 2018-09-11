@@ -19,6 +19,7 @@
 		width: 270px;
 		flex: 0 0 270px;
 		justify-content: space-between;
+		align-items: flex-start;
 		padding-top: 28px;
 	}
 
@@ -39,9 +40,69 @@
 	&-menu__link {
 		display: block;
 		margin-right: 25px;
+		@include fontStyle($mont, 14px, 18px, 600);
+		color: $color_8C8C8C;
+		transition: $transition;
+
+		&:hover {
+			color: $color_4A4B4C;
+		}
 
 		&:last {
 			margin-right: 0;
+		}
+	}
+
+	&__phone {
+		@include fontStyle($mont, 14px, 18px, 600);
+		color: $color_565656;
+	}
+
+	&__lang-item {
+		@include fontStyle($mont, 14px, 18px, 600);
+		color: $color_8C8C8C;
+		transition: $transition;
+		margin-right: 10px;
+
+		&:hover,
+		&--active {
+			color: $color_4A4B4C;
+		}
+
+		&:last {
+			margin-right: 0;
+		}
+	}
+}
+
+.footer {
+	position: relative;
+
+	&__logo {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+	}
+}
+
+.video-slider {
+	height: 340px;
+	z-index: 1;
+
+	&__item {
+		height: 340px;
+		overflow: hidden;
+		position: relative;
+
+		video {
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform: translateY(-50%);
+			width: 100%;
+			height: auto;
 		}
 	}
 }

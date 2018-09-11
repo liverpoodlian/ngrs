@@ -10,8 +10,14 @@ footer {
     overflow-x: hidden;
 }
 
-main {
-	position: relative;
+.content {
+	&:before {
+		@include before(0, 0);
+		@include backgroundImage("/images/bg_wave.png", center, no-repeat, contain);
+		width: 100%;
+		height: 1400px;
+		pointer-events: none;
+	}
 }
 
 .h1 {
@@ -67,6 +73,33 @@ main {
 			margin-right: 215px;
 		}
 	}
+
+	&--services {
+		display: flex;
+
+		.section__text {
+			max-width: 175px;
+			margin-right: 185px;
+		}
+	}
+
+	&--who {
+		display: flex;
+
+		.section__text {
+			max-width: 175px;
+		}
+	}
+
+	&--contacts {
+		display: flex;
+		margin-bottom: 75px;
+
+		.section__text {
+			max-width: 295px;
+			margin-right: 185px;
+		}
+	}
 }
 
 .about {
@@ -107,4 +140,100 @@ main {
 		transform: translateY(-50%);
 		z-index: 1;
 	}
+}
+
+.dots-bg {
+	position: relative;
+	padding-top: 185px;
+	margin-bottom: 260px;
+	@include backgroundImage('/images/dots-back.png', top center, no-repeat, 100% auto);
+
+	&:after {
+		@include before(100%, 0);
+		width: 100%;
+		height: 113px;
+		background: linear-gradient(180deg, rgba($color_000,0) 0%, $color_fff 100%);
+		pointer-events: none;
+	}
+}
+
+.services {
+	display: flex;
+	margin-bottom: 255px;
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: calc(33% - 70px);
+		flex: 0 0 calc(33% - 70px);
+		margin-right: 70px;
+
+		&:nth-child(3) {
+			margin-right: 0;
+		}
+
+		.paragraph {
+			@include fontStyle($pt, 19px, 32px);
+
+			&:nth-child(2n) {
+				margin-top: 30px;
+			}
+		}
+	}
+
+	&__title {
+		min-height: 60px;
+		flex: 0 0 60px;
+		@include fontStyle($bebe, 30px, 30px, 700);
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+		color: $color_4A4B4C;
+		margin-bottom: 46px;
+	}
+
+	&__text {
+		position: relative;
+		padding-top: 30px;
+
+		&:before {
+			@include before(0, 0);
+			width: 48px;
+			height: 3px;
+			background-color: $color_5A85AD;
+		}
+	}
+}
+
+.socials {
+	display: flex;
+	margin-top: 35px;
+
+	&__item {
+		width: 26px;
+		height: 26px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		margin-right: 15px;
+
+		&--linkedin {
+			background-image: url(/images/linkedin.svg);
+		}
+
+		&--instagram {
+			background-image: url(/images/instagram.svg);
+		}
+
+		&--facebook {
+			background-image: url(/images/facebook.svg);
+			margin-right: 0;
+		}
+	}
+}
+
+.copyright {
+	@include fontStyle($pt, 16px, 28px);
+	color: $color_4A4B4C;
+	margin-top: 80px;
 }
