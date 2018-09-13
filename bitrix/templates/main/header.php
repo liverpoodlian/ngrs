@@ -20,12 +20,12 @@
 			<div class="header__left-col">
 				<a href="/" class="header__logo"></a>
 				<nav class="header-menu">
-					<a href="" class="header-menu__link">Главная</a>
-					<a href="" class="header-menu__link">О компании</a>
-					<a href="" class="header-menu__link">Наши сервисы</a>
-					<a href="" class="header-menu__link">Наши проекты</a>
-					<a href="" class="header-menu__link">Рекомендации</a>
-					<a href="" class="header-menu__link">Контакты</a>
+					<a href="/" class="header-menu__link">Главная</a>
+					<a href="/#about" class="header-menu__link">О компании</a>
+					<a href="/#services" class="header-menu__link">Наши сервисы</a>
+					<a href="/#projects" class="header-menu__link">Наши проекты</a>
+					<a href="/#recommendations" class="header-menu__link">Рекомендации</a>
+					<a href="/#contacts" class="header-menu__link">Контакты</a>
 				</nav>
 			</div>
 			<div class="header__right-col">

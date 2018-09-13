@@ -43,9 +43,22 @@
 		@include fontStyle($mont, 14px, 18px, 600);
 		color: $color_8C8C8C;
 		transition: $transition;
+		position: relative;
+
+		&:after {
+			@include before(auto, 0, auto, -12px);
+			width: 20px;
+			height: 2px;
+			background-color: transparent;
+			transition: $transition;
+		}
 
 		&:hover {
 			color: $color_4A4B4C;
+
+			&:after {
+				background-color: $color_F8CA6C;
+			}
 		}
 
 		&:last {
@@ -64,9 +77,23 @@
 		transition: $transition;
 		margin-right: 10px;
 
+		&:after {
+			@include before(auto, 50%, auto, -12px);
+			width: 20px;
+			height: 2px;
+			background-color: transparent;
+			transform: translateX(-50%);
+			transition: $transition;
+		}
+
 		&:hover,
 		&--active {
 			color: $color_4A4B4C;
+			position: relative;
+
+			&:after {
+				background-color: $color_F8CA6C;
+			}
 		}
 
 		&:last {

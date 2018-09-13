@@ -85,10 +85,70 @@ footer {
 
 	&--who {
 		display: flex;
+		justify-content: space-between;
+		padding-bottom: 45px;
 
 		.section__text {
 			max-width: 175px;
 		}
+
+		.section__description {
+			margin-top: 45px;
+			position: relative;
+			z-index: 2;
+		}
+	}
+
+	&--where {
+		display: flex;
+		margin-bottom: 185px;
+
+		.h2 {
+			margin-bottom: 30px;
+		}
+
+		.section__text {
+			max-width: 295px;
+			flex: 0 0 295px;
+			padding-top: 125px;
+		}
+
+		.section__description {
+			display: flex;
+			align-items: flex-start;
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	&--projects {
+		display: flex;
+		margin-bottom: 185px;
+		padding-top: 180px;
+		padding-bottom: 170px;
+
+		.section__text {
+			max-width: 320px;
+			flex: 0 0 320px;
+			margin-right: 75px;
+		}
+
+		.section__description {
+			flex: 0 0 calc(100% - 395px);
+			width: calc(100% - 395px);
+			
+			.paragraph {
+				@include fontStyle($pt, 18px, 28px, 700);
+				color: $color_303030;
+				text-align: center;
+			    top: -85px;
+    			position: relative;
+			}
+		}
+
 	}
 
 	&--contacts {
@@ -99,6 +159,32 @@ footer {
 			max-width: 295px;
 			margin-right: 185px;
 		}
+
+		.section__description {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		.contact {
+			&-phone {
+				@include fontStyle($pt, 70px, 70px);
+				color: $color_4A4B4C;
+				display: block;
+				margin-bottom: 55px;
+				margin-top: 60px;
+			}
+
+			&-email {
+				@include fontStyle($pt, 50px, 50px);
+				color: $color_4a7296;
+				display: block;
+			}
+		}
+	}
+
+	&--reviews {
+		padding-bottom: 290px;
 	}
 }
 
@@ -131,6 +217,14 @@ footer {
 	position: relative;
 	overflow: hidden;
 
+	&__img {
+		position: absolute;
+		z-index: 2;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
 	.light-paints {
 		width: 100%;
 		height: auto;
@@ -142,19 +236,27 @@ footer {
 	}
 }
 
+.clouds-bg {
+	@include backgroundImage("/images/plumage.png", center, no-repeat, cover);
+}
+
 .dots-bg {
 	position: relative;
 	padding-top: 185px;
 	margin-bottom: 260px;
-	@include backgroundImage('/images/dots-back.png', top center, no-repeat, 100% auto);
+	@include backgroundImage('/images/dots-back.png', top center, no-repeat, cover);
 
 	&:after {
-		@include before(100%, 0);
+		@include before(93%, 0);
 		width: 100%;
 		height: 113px;
 		background: linear-gradient(180deg, rgba($color_000,0) 0%, $color_fff 100%);
 		pointer-events: none;
 	}
+}
+
+.lines-bg {
+	@include backgroundImage('/images/lines-bottom.png', left bottom, no-repeat);
 }
 
 .services {
@@ -236,4 +338,130 @@ footer {
 	@include fontStyle($pt, 16px, 28px);
 	color: $color_4A4B4C;
 	margin-top: 80px;
+}
+
+.projects-slider {
+	height: 305px;
+	width: 100%;
+
+	&__wrap {
+		height: 150px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__project {
+		width: 140px;
+		height: 40px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.slick-dots {
+		li {
+			width: 11px;
+			height: 11px;
+			border-radius: 50%;
+			background-color: $color_CECECE;
+			overflow: hidden;
+			transition: $transition;
+			margin: 0 10px;
+
+			&.slick-active {
+				background-color: $color_5A85AD;
+			}
+
+			button {
+				width: 100%;
+				height: 100%;
+				text-indent: -9999px;
+				white-space: nowrap;
+			}
+		}
+	}
+}
+
+.slick-slide {
+	outline: none;
+}
+
+.reviews-slider {
+	margin-top: 40px;
+
+	&__wrap {
+		display: flex;
+	}
+
+	&__author {
+		display: flex;
+		margin-right: 160px;
+	}
+
+	&__img {
+		width: 93px;
+		flex: 0 0 93px;
+		height: 93px;
+		margin-right: 27px;
+		border-radius: 50%;
+		overflow: hidden;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	&__about {
+		width: 200px;
+		flex: 0 0 200px;
+	}
+
+	&__fio {
+		@include fontStyle($pt, 20px, 28px, 700);
+		color: $color_4A4B4C;
+		margin-bottom: 15px;
+	}
+
+	&__position {
+		@include fontStyle($pt, 18px, 24px);
+		color: $color_8C8C8C;
+		margin-bottom: 15px;
+	}
+
+	&__info {
+		@include fontStyle($pt, 14px, 20px);
+		color: $color_8C8C8C;
+	}
+
+	&__text-wrap {
+		width: 600px;
+		flex: 0 0 600px;
+	}
+
+	&__text {
+		@include fontStyle($pt, 28px, 46px);
+		font-style: italic;
+		color: $color_4A4B4C;
+		margin-bottom: 50px;
+	}
+
+	&__next {
+		@include fontStyle($pt, 16px, 20px, 700);
+		color: $color_4A4B4C;
+		padding-right: 20px;
+		position: relative;
+		outline: none;
+		cursor: pointer;
+
+		&:focus,
+		&:active {
+			outline: none;
+		}
+
+		&:after {
+			@include before(6px, auto, 0);
+			width: 7px;
+			height: 12px;
+			@include backgroundImage('/images/slider-arrow.png', center, no-repeat, contain);
+		}
+	}
 }
