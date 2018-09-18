@@ -1,0 +1,135 @@
+.header {
+	display: flex;
+	max-width: 1400px;
+	@include marginAuto;
+	padding-top: 50px;
+	margin-bottom: 100px;
+
+	&__left-col,
+	&__right-col {
+		display: flex;
+	}
+
+	&__left-col {
+		width: calc(100% - 350px);
+		flex: 0 0 calc(100% - 350px);
+	}
+
+	&__right-col {
+		width: 270px;
+		flex: 0 0 270px;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding-top: 28px;
+	}
+
+	&__logo {
+		width: 60px;
+		flex: 0 0 60px;
+		height: 92px;
+		@include backgroundImage('/images/logo-header.svg', center);
+		margin-right: 60px;
+	}
+
+	&-menu {
+		margin-top: 28px;
+		display: flex;
+		align-items: flex-start;
+	}
+
+	&-menu__link {
+		display: block;
+		margin-right: 25px;
+		@include fontStyle($mont, 14px, 18px, 600);
+		color: $color_8C8C8C;
+		transition: $transition;
+		position: relative;
+
+		&:after {
+			@include before(auto, 0, auto, -12px);
+			width: 20px;
+			height: 2px;
+			background-color: transparent;
+			transition: $transition;
+		}
+
+		&:hover {
+			color: $color_4A4B4C;
+
+			&:after {
+				background-color: $color_F8CA6C;
+			}
+		}
+
+		&:last {
+			margin-right: 0;
+		}
+	}
+
+	&__phone {
+		@include fontStyle($mont, 14px, 18px, 600);
+		color: $color_565656;
+	}
+
+	&__lang-item {
+		@include fontStyle($mont, 14px, 18px, 600);
+		color: $color_8C8C8C;
+		transition: $transition;
+		margin-right: 10px;
+
+		&:after {
+			@include before(auto, 50%, auto, -12px);
+			width: 20px;
+			height: 2px;
+			background-color: transparent;
+			transform: translateX(-50%);
+			transition: $transition;
+		}
+
+		&:hover,
+		&--active {
+			color: $color_4A4B4C;
+			position: relative;
+
+			&:after {
+				background-color: $color_F8CA6C;
+			}
+		}
+
+		&:last {
+			margin-right: 0;
+		}
+	}
+}
+
+.footer {
+	position: relative;
+
+	&__logo {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+	}
+}
+
+.video-slider {
+	height: 340px;
+	z-index: 1;
+
+	&__item {
+		height: 340px;
+		overflow: hidden;
+		position: relative;
+
+		video {
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform: translateY(-50%);
+			width: 100%;
+			height: auto;
+		}
+	}
+}

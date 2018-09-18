@@ -14,13 +14,23 @@ $s_mobile_width: 600px;
 $mobile_width: 480px;
 
 /* fonts */
-$futura_font: 'FuturaNew';
-$book_font: 'FuturaBook';
-$noto_font: 'NotoSans';
-$sans_font: 'OpenSans';
+$bebe: "Bebas";
+$pt: "PT";
+$mont: "Montserrat";
 
 /* colors */
-$base: #4F4F4F;
+$color_4A4B4C: #4A4B4C;
+$color_8C8C8C: #8C8C8C;
+$color_565656: #565656;
+$color_5A85AD: #5A85AD;
+$color_000: #000;
+$color_fff: #fff;
+$color_303030: #303030;
+$color_CECECE: #CECECE;
+$color_5A85AD: #5A85AD;
+$color_4a7296: #4a7296;
+$color_8C8C8C: #8C8C8C;
+$color_F8CA6C: #F8CA6C;
 
 /* others */
-$transition_all: all .3s ease-in-out;
+$transition: all .3s ease-in-out;
