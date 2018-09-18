@@ -218,6 +218,10 @@ $APPLICATION->SetTitle("Главная");
 			<a href="" target="_blank" class="socials__item socials__item--instagram"></a>
 			<a href="" target="_blank" class="socials__item socials__item--facebook"></a>
 		</div>
+		<div class="contacts-mobile">
+			<a class="contact-phone" href="tel:+74956467075">+7 (495) 646-70-75</a>
+			<a class="contact-email" href="mailto:contacts@ngrs.com">contacts@ngrs.com</a>
+		</div>
 		<p class="copyright">2018 © NGRS – все права защищены</p>
 	</div>
 	<div class="section__description">

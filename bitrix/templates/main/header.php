@@ -34,6 +34,14 @@
 					<a href="" class="header__lang-item">eng.</a>
 				</div>
 				<a href="tel:+74956467075" class="header__phone">+7 (495) 646-70-75</a>
+				<div class="header__mobile">
+					<a href="tel:+74956467075" class="header__mobile-phone"></a>
+					<div class="header__burger">
+						<span class="header__burger-item"></span>
+						<span class="header__burger-item"></span>
+						<span class="header__burger-item"></span>
+					</div>
+				</div>
 			</div>
 		</header>
 		<main class="content">

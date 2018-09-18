@@ -10,6 +10,12 @@ footer {
     overflow-x: hidden;
 }
 
+br {
+	@media (max-width: $tablet_width) {
+		display: none;
+	}
+}
+
 .content {
 	&:before {
 		@include before(0, 0);
@@ -17,6 +23,14 @@ footer {
 		width: 100%;
 		height: 1400px;
 		pointer-events: none;
+
+		@media (max-width: $s_mobile_width) {
+			height: 1100px;
+		}
+
+		@media (max-width: $mobile_width) {
+			height: 1000px;
+		}
 	}
 }
 
@@ -25,6 +39,18 @@ footer {
 	letter-spacing: 2.75px;
 	text-transform: uppercase;
 	color: $color_4A4B4C;
+
+	@media (max-width: $tablet_width) {
+		font-size: 45px;
+	}
+
+	@media (max-width: $big-mobile_width) {
+		font-size: 40px;
+	}
+
+	@media (max-width: $mobile_width) {
+		font-size: 35px;
+	}
 }
 
 .h2 {
@@ -33,11 +59,27 @@ footer {
 	text-transform: uppercase;
 	color: $color_4A4B4C;
 	margin-bottom: 40px;
+
+	@media (max-width: $tablet_width) {
+		font-size: 40px;
+	}
+
+	@media (max-width: $big-mobile_width) {
+		font-size: 35px;
+	}
+
+	@media (max-width: $mobile_width) {
+		font-size: 32px;
+	}
 }
 
 .paragraph {
 	@include fontStyle($pt, 22px, 38px);
 	color: $color_4A4B4C;
+
+	@media (max-width: $mobile_width) {
+		font-size: 18px;
+	}
 
 	&--italic {
 		font-style: italic;
@@ -48,8 +90,32 @@ footer {
 	max-width: 1400px;
 	@include marginAuto;
 
+	@media (max-width: $big-notebook_width) {
+		max-width: 100%;
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+
+	@media (max-width: $smallpc_width) {
+		padding-left: 50px;
+    	padding-right: 50px;
+	}
+
+	@media (max-width: $mobile_width) {
+		padding-left: 30px;
+    	padding-right: 20px;
+	}
+
 	&--main {
 		margin-bottom: 410px;
+
+		@media (max-width: $s_mobile_width) {
+			margin-bottom: 280px;
+		}
+
+		@media (max-width: $mobile_width) {
+			margin-bottom: 250px;
+		}
 
 		&:after {
 			@include before(0, 0);
@@ -57,6 +123,16 @@ footer {
 			width: 100%;
 			height: 745px;
 			pointer-events: none;
+
+			@media (max-width: $s_mobile_width) {
+				background-size: 124%;
+    			height: 825px;
+			}
+
+			@media (max-width: $mobile_width) {
+				background-size: 130%;
+			    height: 835px;
+			}
 		}
 
 		.paragraph {
@@ -68,9 +144,23 @@ footer {
 		display: flex;
 		margin-bottom: 180px;
 
+		@media (max-width: $tablet_width) {
+			flex-direction: column;
+			margin-bottom: 75px;
+		}
+
 		.section__text {
 			max-width: 315px;
 			margin-right: 215px;
+
+			@media (max-width: $smallpc_width) {
+				margin-right: 65px;
+			}
+
+			@media (max-width: $tablet_width) {
+				margin-right: 0;
+				margin-bottom: 70px;
+			}
 		}
 	}
 
@@ -88,20 +178,45 @@ footer {
 		justify-content: space-between;
 		padding-bottom: 45px;
 
+		@media (max-width: $s_mobile_width) {
+			flex-direction: column;
+		}
+
 		.section__text {
 			max-width: 175px;
+			flex: 0 0 175px;
+
+			@media (max-width: $s_mobile_width) {
+				flex: none;
+			}
 		}
 
 		.section__description {
 			margin-top: 45px;
 			position: relative;
 			z-index: 2;
+
+			@media (max-width: $tablet_width) {
+				margin-top: 0;
+
+				img {
+					width: 100%;
+				}
+			}
 		}
 	}
 
 	&--where {
 		display: flex;
 		margin-bottom: 185px;
+
+		@media (max-width: $tablet_width) {
+			flex-direction: column;
+		}
+
+		@media (max-width: $big-mobile_width) {
+			margin-bottom: 80px;
+		}
 
 		.h2 {
 			margin-bottom: 30px;
@@ -111,6 +226,15 @@ footer {
 			max-width: 295px;
 			flex: 0 0 295px;
 			padding-top: 125px;
+
+			@media (max-width: $laptop_width) {
+				padding-top: 0;
+			}
+
+			@media (max-width: $tablet_width) {
+				flex: none;
+				margin-bottom: 40px;
+			}
 		}
 
 		.section__description {
@@ -120,6 +244,12 @@ footer {
 			img {
 				width: 100%;
 				height: auto;
+
+				@media (max-width: $mobile_width) {
+				    width: 120%;
+				    left: -34px;
+				    position: relative
+				}
 			}
 		}
 	}
@@ -155,15 +285,37 @@ footer {
 		display: flex;
 		margin-bottom: 75px;
 
+		@media (max-width: $big-mobile_width) {
+			margin-bottom: 20px;
+		}
+
 		.section__text {
 			max-width: 295px;
 			margin-right: 185px;
+
+			@media (max-width: $tablet_width) {
+				margin-right: 50px;
+			}
+
+			@media (max-width: $big-mobile_width) {
+				max-width: 100%;
+				width: 100%;
+				margin-right: 0;
+
+				.h2 {
+					max-width: 295px;
+				}
+			}
 		}
 
 		.section__description {
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
+
+			@media (max-width: $big-mobile_width) {
+				display: none;
+			}
 		}
 
 		.contact {
@@ -173,12 +325,44 @@ footer {
 				display: block;
 				margin-bottom: 55px;
 				margin-top: 60px;
+
+				@media (max-width: $laptop_width) {
+					font-size: 50px;
+				}
+
+				@media (max-width: $tablet_width) {
+					font-size: 40px;
+				}
+
+				@media (max-width: $big-mobile_width) {
+					margin-bottom: 25px;
+				}
+
+				@media (max-width: $mobile_width) {
+					font-size: 27px;
+				}
 			}
 
 			&-email {
 				@include fontStyle($pt, 50px, 50px);
 				color: $color_4a7296;
 				display: block;
+
+				@media (max-width: $tablet_width) {
+					font-size: 40px;
+				}
+
+				@media (max-width: $mobile_width) {
+					font-size: 20px;
+				}
+			}
+
+			&-mobile {
+				display: none;
+
+				@media (max-width: $big-mobile_width) {
+					display: block;
+				}
 			}
 		}
 	}
@@ -191,11 +375,25 @@ footer {
 .about {
 	display: flex;
 
+	@media (max-width: $big-mobile_width) {
+		flex-direction: column;
+	}
+
 	&__item {
 		margin-right: 45px;
 
-		&:last {
+		@media (max-width: $tablet_width) {
+			margin-right: 65px;
+		}
+
+		@media (max-width: $big-mobile_width) {
 			margin-right: 0;
+			margin-bottom: 50px;
+		}
+
+		&:last-child {
+			margin-right: 0;
+			margin-bottom: 0;
 		}
 	}
 
@@ -204,11 +402,19 @@ footer {
 		letter-spacing: 4.5px;
 		color: $color_4A4B4C;
 		margin-bottom: 30px;
+
+		@media (max-width: $mobile_width) {
+			font-size: 70px;
+		}
 	}
 
 	&__text {
 		@include fontStyle($pt, 19px, 32px);
 		color: $color_4A4B4C;
+
+		@media (max-width: $mobile_width) {
+			font-size: 14px;
+		}
 	}
 }
 
@@ -223,6 +429,10 @@ footer {
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
+
+		@media (max-width: $s_mobile_width) {
+			display: none;
+		}
 	}
 
 	.light-paints {
@@ -245,6 +455,10 @@ footer {
 	padding-top: 185px;
 	margin-bottom: 260px;
 	@include backgroundImage('/images/dots-back.png', top center, no-repeat, cover);
+
+	@media (max-width: $big-mobile_width) {
+		margin-bottom: 120px;
+	}
 
 	&:after {
 		@include before(93%, 0);
@@ -338,6 +552,14 @@ footer {
 	@include fontStyle($pt, 16px, 28px);
 	color: $color_4A4B4C;
 	margin-top: 80px;
+
+	@media (max-width: $big-mobile_width) {
+		text-align: center;
+	}
+
+	@media (max-width: $mobile_width) {
+		font-size: 12px;
+	}
 }
 
 .projects-slider {
