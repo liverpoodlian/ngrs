@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Главная");
+$APPLICATION->SetTitle("NGRS");
 ?>
 <section id="main" class="section section--main">
 	<h1 class="h1">NGRS – поиск и привлечение талантов</h1>
@@ -218,7 +218,7 @@ $APPLICATION->SetTitle("Главная");
 			<a href="" target="_blank" class="socials__item socials__item--instagram"></a>
 			<a href="" target="_blank" class="socials__item socials__item--facebook"></a>
 		</div>
-		<div class="contacts-mobile">
+		<div class="contact-mobile">
 			<a class="contact-phone" href="tel:+74956467075">+7 (495) 646-70-75</a>
 			<a class="contact-email" href="mailto:contacts@ngrs.com">contacts@ngrs.com</a>
 		</div>

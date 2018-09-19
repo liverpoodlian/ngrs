@@ -60,8 +60,8 @@ function initFooterSlider() {
 function initProjectsSlider() {
     $('.projects-slider').slick({
         infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         dots: true,
         arrows: false
     });

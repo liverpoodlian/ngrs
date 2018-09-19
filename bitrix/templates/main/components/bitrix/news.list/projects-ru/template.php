@@ -20,10 +20,10 @@ $i = 0;
 		<div class="projects-slider__item">
 			<div class="projects-slider__wrap">
 	<?}?>
-		<div class="projects-slider__project" style="background-image: url('<?=CFile::GetPath($arItem["PROPERTIES"]["LOGO"]["VALUE"])?>')"></div>
+		<img class="projects-slider__project" src='<?=CFile::GetPath($arItem["PROPERTIES"]["LOGO"]["VALUE"])?>'>
 	<?
 		$i++;
-		if($i == 2 || end($arResult["ITEMS"]) == $arItem) {?>
+		if($i == 8 || end($arResult["ITEMS"]) == $arItem) {?>
 				</div>
 			</div>	
 		<?

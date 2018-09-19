@@ -12,7 +12,6 @@
 	    <?require($_SERVER["DOCUMENT_ROOT"]."/template/header-includes.php");?>
 	    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 		<script type="text/javascript" src="/js/lib/jquery.min.3.3.1.js"></script>
-		<script defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&name=pro100api&key=AIzaSyBYGhS9p49bpQh4P2XW__cA3Jrjr4DRiRU"></script>
 	</head>
 	<body>
 		<?$APPLICATION->ShowPanel();?>
@@ -30,8 +29,8 @@
 			</div>
 			<div class="header__right-col">
 				<div class="header__langs">
-					<a href="" class="header__lang-item header__lang-item--active">ru.</a>
-					<a href="" class="header__lang-item">eng.</a>
+					<a href="/" class="header__lang-item header__lang-item--active">ru.</a>
+					<a href="/en/" class="header__lang-item">eng.</a>
 				</div>
 				<a href="tel:+74956467075" class="header__phone">+7 (495) 646-70-75</a>
 				<div class="header__mobile">
