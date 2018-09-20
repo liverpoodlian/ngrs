@@ -48,3 +48,7 @@ table {
 textarea {
     resize: none;
 }
+
+a {
+    text-decoration: none;
+}

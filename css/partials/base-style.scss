@@ -4,10 +4,20 @@ html:not(.android-device) {
     }
 }
 
+* {
+	box-sizing: border-box;
+}
+
 header,
 main,
 footer {
     overflow-x: hidden;
+}
+
+br {
+	@media (max-width: $tablet_width) {
+		display: none;
+	}
 }
 
 .content {
@@ -17,6 +27,14 @@ footer {
 		width: 100%;
 		height: 1400px;
 		pointer-events: none;
+
+		@media (max-width: $s_mobile_width) {
+			height: 1100px;
+		}
+
+		@media (max-width: $mobile_width) {
+			height: 1000px;
+		}
 	}
 }
 
@@ -25,6 +43,18 @@ footer {
 	letter-spacing: 2.75px;
 	text-transform: uppercase;
 	color: $color_4A4B4C;
+
+	@media (max-width: $tablet_width) {
+		font-size: 45px;
+	}
+
+	@media (max-width: $big-mobile_width) {
+		font-size: 40px;
+	}
+
+	@media (max-width: $mobile_width) {
+		font-size: 35px;
+	}
 }
 
 .h2 {
@@ -33,11 +63,27 @@ footer {
 	text-transform: uppercase;
 	color: $color_4A4B4C;
 	margin-bottom: 40px;
+
+	@media (max-width: $tablet_width) {
+		font-size: 40px;
+	}
+
+	@media (max-width: $big-mobile_width) {
+		font-size: 35px;
+	}
+
+	@media (max-width: $mobile_width) {
+		font-size: 32px;
+	}
 }
 
 .paragraph {
 	@include fontStyle($pt, 22px, 38px);
 	color: $color_4A4B4C;
+
+	@media (max-width: $mobile_width) {
+		font-size: 18px;
+	}
 
 	&--italic {
 		font-style: italic;
@@ -48,8 +94,32 @@ footer {
 	max-width: 1400px;
 	@include marginAuto;
 
+	@media (max-width: $big-notebook_width) {
+		max-width: 100%;
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+
+	@media (max-width: $smallpc_width) {
+		padding-left: 50px;
+    	padding-right: 50px;
+	}
+
+	@media (max-width: $mobile_width) {
+		padding-left: 30px;
+    	padding-right: 20px;
+	}
+
 	&--main {
 		margin-bottom: 410px;
+
+		@media (max-width: $s_mobile_width) {
+			margin-bottom: 280px;
+		}
+
+		@media (max-width: $mobile_width) {
+			margin-bottom: 250px;
+		}
 
 		&:after {
 			@include before(0, 0);
@@ -57,6 +127,16 @@ footer {
 			width: 100%;
 			height: 745px;
 			pointer-events: none;
+
+			@media (max-width: $s_mobile_width) {
+				background-size: 124%;
+    			height: 825px;
+			}
+
+			@media (max-width: $mobile_width) {
+				background-size: 130%;
+			    height: 835px;
+			}
 		}
 
 		.paragraph {
@@ -68,18 +148,41 @@ footer {
 		display: flex;
 		margin-bottom: 180px;
 
+		@media (max-width: $tablet_width) {
+			flex-direction: column;
+			margin-bottom: 75px;
+		}
+
 		.section__text {
 			max-width: 315px;
 			margin-right: 215px;
+
+			@media (max-width: $smallpc_width) {
+				margin-right: 65px;
+			}
+
+			@media (max-width: $tablet_width) {
+				margin-right: 0;
+				margin-bottom: 70px;
+			}
 		}
 	}
 
 	&--services {
 		display: flex;
 
+		@media (max-width: $laptop_width) {
+			flex-direction: column;
+		}
+
 		.section__text {
 			max-width: 175px;
 			margin-right: 185px;
+
+			@media (max-width: $laptop_width) {
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
 		}
 	}
 
@@ -88,20 +191,45 @@ footer {
 		justify-content: space-between;
 		padding-bottom: 45px;
 
+		@media (max-width: $s_mobile_width) {
+			flex-direction: column;
+		}
+
 		.section__text {
 			max-width: 175px;
+			flex: 0 0 175px;
+
+			@media (max-width: $s_mobile_width) {
+				flex: none;
+			}
 		}
 
 		.section__description {
 			margin-top: 45px;
 			position: relative;
 			z-index: 2;
+
+			@media (max-width: $tablet_width) {
+				margin-top: 0;
+
+				img {
+					width: 100%;
+				}
+			}
 		}
 	}
 
 	&--where {
 		display: flex;
 		margin-bottom: 185px;
+
+		@media (max-width: $tablet_width) {
+			flex-direction: column;
+		}
+
+		@media (max-width: $big-mobile_width) {
+			margin-bottom: 80px;
+		}
 
 		.h2 {
 			margin-bottom: 30px;
@@ -111,6 +239,15 @@ footer {
 			max-width: 295px;
 			flex: 0 0 295px;
 			padding-top: 125px;
+
+			@media (max-width: $laptop_width) {
+				padding-top: 0;
+			}
+
+			@media (max-width: $tablet_width) {
+				flex: none;
+				margin-bottom: 40px;
+			}
 		}
 
 		.section__description {
@@ -120,6 +257,12 @@ footer {
 			img {
 				width: 100%;
 				height: auto;
+
+				@media (max-width: $mobile_width) {
+				    width: 120%;
+				    left: -34px;
+				    position: relative
+				}
 			}
 		}
 	}
@@ -130,22 +273,60 @@ footer {
 		padding-top: 180px;
 		padding-bottom: 170px;
 
+		@media (max-width: $laptop_width) {
+			flex-direction: column;
+		}
+
+		@media (max-width: $big-mobile_width) {
+			margin-bottom: 80px;
+			padding-top: 85px;
+			padding-bottom: 80px;
+		}
+
 		.section__text {
 			max-width: 320px;
 			flex: 0 0 320px;
 			margin-right: 75px;
+
+			@media (max-width: $laptop_width) {
+				flex: none;
+				margin-right: 0;
+				margin-bottom: 60px;
+			}
+
+			@media (max-width: $mobile_width) {
+				.paragraph {
+					font-size: 14px;
+				}
+			}
 		}
 
 		.section__description {
 			flex: 0 0 calc(100% - 395px);
 			width: calc(100% - 395px);
+
+			@media (max-width: $laptop_width) {
+				flex: none;
+				width: 100%;
+			}
 			
 			.paragraph {
 				@include fontStyle($pt, 18px, 28px, 700);
 				color: $color_303030;
 				text-align: center;
-			    top: -85px;
+			    top: -25px;
     			position: relative;
+
+    			@media (max-width: $big-mobile_width) {
+    				top: 0;
+    				margin-top: 80px;
+    			}
+
+    			@media (max-width: $mobile_width) {
+					font-size: 14px;
+					max-width: 185px;
+					@include marginAuto;
+				}
 			}
 		}
 
@@ -155,15 +336,37 @@ footer {
 		display: flex;
 		margin-bottom: 75px;
 
+		@media (max-width: $big-mobile_width) {
+			margin-bottom: 20px;
+		}
+
 		.section__text {
 			max-width: 295px;
 			margin-right: 185px;
+
+			@media (max-width: $tablet_width) {
+				margin-right: 50px;
+			}
+
+			@media (max-width: $big-mobile_width) {
+				max-width: 100%;
+				width: 100%;
+				margin-right: 0;
+
+				.h2 {
+					max-width: 295px;
+				}
+			}
 		}
 
 		.section__description {
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
+
+			@media (max-width: $big-mobile_width) {
+				display: none;
+			}
 		}
 
 		.contact {
@@ -173,29 +376,79 @@ footer {
 				display: block;
 				margin-bottom: 55px;
 				margin-top: 60px;
+
+				@media (max-width: $laptop_width) {
+					font-size: 50px;
+				}
+
+				@media (max-width: $tablet_width) {
+					font-size: 40px;
+				}
+
+				@media (max-width: $big-mobile_width) {
+					margin-bottom: 25px;
+				}
+
+				@media (max-width: $mobile_width) {
+					font-size: 27px;
+				}
 			}
 
 			&-email {
 				@include fontStyle($pt, 50px, 50px);
 				color: $color_4a7296;
 				display: block;
+
+				@media (max-width: $tablet_width) {
+					font-size: 40px;
+				}
+
+				@media (max-width: $mobile_width) {
+					font-size: 20px;
+				}
+			}
+
+			&-mobile {
+				display: none;
+
+				@media (max-width: $big-mobile_width) {
+					display: block;
+				}
 			}
 		}
 	}
 
 	&--reviews {
 		padding-bottom: 290px;
+
+		@media (max-width: $big-mobile_width) {
+			padding-bottom: 130px;
+		}
 	}
 }
 
 .about {
 	display: flex;
 
+	@media (max-width: $big-mobile_width) {
+		flex-direction: column;
+	}
+
 	&__item {
 		margin-right: 45px;
 
-		&:last {
+		@media (max-width: $tablet_width) {
+			margin-right: 65px;
+		}
+
+		@media (max-width: $big-mobile_width) {
 			margin-right: 0;
+			margin-bottom: 50px;
+		}
+
+		&:last-child {
+			margin-right: 0;
+			margin-bottom: 0;
 		}
 	}
 
@@ -204,11 +457,19 @@ footer {
 		letter-spacing: 4.5px;
 		color: $color_4A4B4C;
 		margin-bottom: 30px;
+
+		@media (max-width: $mobile_width) {
+			font-size: 70px;
+		}
 	}
 
 	&__text {
 		@include fontStyle($pt, 19px, 32px);
 		color: $color_4A4B4C;
+
+		@media (max-width: $mobile_width) {
+			font-size: 14px;
+		}
 	}
 }
 
@@ -223,6 +484,10 @@ footer {
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
+
+		@media (max-width: $s_mobile_width) {
+			display: none;
+		}
 	}
 
 	.light-paints {
@@ -246,6 +511,11 @@ footer {
 	margin-bottom: 260px;
 	@include backgroundImage('/images/dots-back.png', top center, no-repeat, cover);
 
+	@media (max-width: $big-mobile_width) {
+		margin-bottom: 120px;
+		padding-top: 0;
+	}
+
 	&:after {
 		@include before(93%, 0);
 		width: 100%;
@@ -257,11 +527,22 @@ footer {
 
 .lines-bg {
 	@include backgroundImage('/images/lines-bottom.png', left bottom, no-repeat);
+
+	@media (max-width: $big-mobile_width) {
+		background-size: 260%;
+		background-position: right bottom;
+		margin-bottom: 100px;
+	}
 }
 
 .services {
 	display: flex;
 	margin-bottom: 255px;
+
+	@media (max-width: $big-mobile_width) {
+		flex-direction: column;
+		margin-bottom: 100px;
+	}
 
 	&__item {
 		display: flex;
@@ -271,8 +552,26 @@ footer {
 		flex: 0 0 calc(33% - 70px);
 		margin-right: 70px;
 
+		@media (max-width: $big-notebook_width) {
+			justify-content: flex-start;
+		}
+
+		@media (max-width: $laptop_width) {
+			width: calc(33% - 40px);
+			flex: 0 0 calc(33% - 40px);
+			margin-right: 40px;
+		}
+
+		@media (max-width: $big-mobile_width) {
+			width: 100%;
+			flex: 0 0 100%;
+			margin-right: 0;
+			margin-bottom: 75px;
+		}
+
 		&:nth-child(3) {
 			margin-right: 0;
+			margin-bottom: 0;
 		}
 
 		.paragraph {
@@ -292,11 +591,27 @@ footer {
 		text-transform: uppercase;
 		color: $color_4A4B4C;
 		margin-bottom: 46px;
+
+		@media (max-width: $big-mobile_width) {
+			min-height: unset;
+			flex: none;
+		}
+
+		@media (max-width: $mobile_width) {
+			font-size: 20px;
+			margin-bottom: 30px;
+		}
 	}
 
 	&__text {
 		position: relative;
 		padding-top: 30px;
+
+		@media (max-width: $mobile_width) {
+			.paragraph {
+				font-size: 14px;
+			}
+		}
 
 		&:before {
 			@include before(0, 0);
@@ -338,28 +653,53 @@ footer {
 	@include fontStyle($pt, 16px, 28px);
 	color: $color_4A4B4C;
 	margin-top: 80px;
+
+	@media (max-width: $big-mobile_width) {
+		text-align: center;
+	}
+
+	@media (max-width: $mobile_width) {
+		font-size: 12px;
+	}
 }
 
 .projects-slider {
 	height: 305px;
 	width: 100%;
 
+	@media (max-width: $big-mobile_width) {
+		height: 400px;
+	}
+
 	&__wrap {
-		height: 150px;
 		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
+		flex-wrap: wrap;
 	}
 
 	&__project {
-		width: 140px;
-		height: 40px;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
+		width: 25%;
+		flex: 0 0 25%;
+		padding-left: 15px;
+		padding-right: 15px;
+		height: 100px;
+
+		@media (max-width: $big-mobile_width) {
+			width: 50%;
+			flex: 0 0 50%;
+		}
+
+		@media (max-width: $mobile_width) {
+			padding: 0;
+		}
 	}
 
 	.slick-dots {
+		bottom: -85px;
+
+		@media (max-width: $big-mobile_width) {
+			bottom: -45px;
+		}
+
 		li {
 			width: 11px;
 			height: 11px;
@@ -392,11 +732,24 @@ footer {
 
 	&__wrap {
 		display: flex;
+
+		@media (max-width: $big-mobile_width) {
+			flex-direction: column;
+		}
 	}
 
 	&__author {
 		display: flex;
 		margin-right: 160px;
+
+		@media (max-width: $smallpc_width) {
+			margin-right: 60px;
+		}
+
+		@media (max-width: $big-mobile_width) {
+			margin-bottom: 40px;
+			margin-right: 0;
+		}
 	}
 
 	&__img {
@@ -408,6 +761,14 @@ footer {
 		overflow: hidden;
 		background-position: center;
 		background-repeat: no-repeat;
+
+		@media (max-width: $mobile_width) {
+			width: 65px;
+			flex: 0 0 65px;
+			height: 65px;
+			margin-right: 15px;
+			background-size: contain;
+		}
 	}
 
 	&__about {
@@ -419,22 +780,44 @@ footer {
 		@include fontStyle($pt, 20px, 28px, 700);
 		color: $color_4A4B4C;
 		margin-bottom: 15px;
+
+		@media (max-width: $mobile_width) {
+			font-size: 16px;
+		}
 	}
 
 	&__position {
 		@include fontStyle($pt, 18px, 24px);
 		color: $color_8C8C8C;
 		margin-bottom: 15px;
+
+		@media (max-width: $mobile_width) {
+			font-size: 14px;
+		}
 	}
 
 	&__info {
 		@include fontStyle($pt, 14px, 20px);
 		color: $color_8C8C8C;
+
+		@media (max-width: $mobile_width) {
+			font-size: 12px;
+		}
 	}
 
 	&__text-wrap {
 		width: 600px;
 		flex: 0 0 600px;
+
+		@media (max-width: $smallpc_width) {
+			width: calc(100% - 380px);
+			flex: 0 0 calc(100% - 380px);
+		}
+
+		@media (max-width: $big-mobile_width) {
+			flex: none;
+			width: 100%;
+		}
 	}
 
 	&__text {
@@ -442,6 +825,14 @@ footer {
 		font-style: italic;
 		color: $color_4A4B4C;
 		margin-bottom: 50px;
+
+		@media (max-width: $tablet_width) {
+			font-size: 22px;
+		}
+
+		@media (max-width: $mobile_width) {
+			font-size: 14px;
+		}
 	}
 
 	&__next {
@@ -451,6 +842,10 @@ footer {
 		position: relative;
 		outline: none;
 		cursor: pointer;
+
+		@media (max-width: $mobile_width) {
+			font-size: 12px;
+		}
 
 		&:focus,
 		&:active {

@@ -12,7 +12,6 @@
 	    <?require($_SERVER["DOCUMENT_ROOT"]."/template/header-includes.php");?>
 	    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 		<script type="text/javascript" src="/js/lib/jquery.min.3.3.1.js"></script>
-		<script defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&name=pro100api&key=AIzaSyBYGhS9p49bpQh4P2XW__cA3Jrjr4DRiRU"></script>
 	</head>
 	<body>
 		<?$APPLICATION->ShowPanel();?>
@@ -30,10 +29,33 @@
 			</div>
 			<div class="header__right-col">
 				<div class="header__langs">
-					<a href="" class="header__lang-item header__lang-item--active">ru.</a>
-					<a href="" class="header__lang-item">eng.</a>
+					<a href="/" class="header__lang-item header__lang-item--active">ru.</a>
+					<a href="/en/" class="header__lang-item">eng.</a>
 				</div>
 				<a href="tel:+74956467075" class="header__phone">+7 (495) 646-70-75</a>
+				<div class="header__mobile">
+					<a href="tel:+74956467075" class="header__mobile-phone"></a>
+					<div class="header__burger">
+						<span class="header__burger-item"></span>
+						<span class="header__burger-item"></span>
+						<span class="header__burger-item"></span>
+					</div>
+					<div class="menu-mobile">
+						<nav>
+							<a href="/" class="header-menu__link">Главная</a>
+							<a href="/#about" class="header-menu__link">О компании</a>
+							<a href="/#services" class="header-menu__link">Наши сервисы</a>
+							<a href="/#projects" class="header-menu__link">Наши проекты</a>
+							<a href="/#recommendations" class="header-menu__link">Рекомендации</a>
+							<a href="/#contacts" class="header-menu__link">Контакты</a>
+						</nav>
+						<div class="header__langs">
+							<a href="/" class="header__lang-item header__lang-item--active">ru.</a>
+							<a href="/en/" class="header__lang-item">eng.</a>
+						</div>
+						<a href="tel:+74956467075" class="header__phone">+7 (495) 646-70-75</a>
+					</div>
+				</div>
 			</div>
 		</header>
 		<main class="content">
