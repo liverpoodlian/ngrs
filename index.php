@@ -214,9 +214,9 @@ $APPLICATION->SetTitle("NGRS");
 	<div class="section__text">
 		<h2 class="h2">Получить консультацию по нашим сервисам</h2>
 		<div class="socials">
-			<a href="" target="_blank" class="socials__item socials__item--linkedin"></a>
-			<a href="" target="_blank" class="socials__item socials__item--instagram"></a>
-			<a href="" target="_blank" class="socials__item socials__item--facebook"></a>
+			<a href="https://www.linkedin.com/company/2223482" target="_blank" class="socials__item socials__item--linkedin"></a>
+			<a href="https://www.instagram.com/ngrs_consulting/" target="_blank" class="socials__item socials__item--instagram"></a>
+			<a href="https://www.facebook.com/NGRSpub/" target="_blank" class="socials__item socials__item--facebook"></a>
 		</div>
 		<div class="contact-mobile">
 			<a class="contact-phone" href="tel:+74956467075">+7 (495) 646-70-75</a>
