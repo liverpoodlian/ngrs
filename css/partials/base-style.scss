@@ -4,6 +4,10 @@ html:not(.android-device) {
     }
 }
 
+* {
+	box-sizing: border-box;
+}
+
 header,
 main,
 footer {
