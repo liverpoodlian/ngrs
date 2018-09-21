@@ -4,6 +4,7 @@ $(function() {
     initProjectsSlider();
     initReviewsSlider();
     openMenu();
+    hidePreloader();
 });
 
 function checkOS() {
@@ -93,5 +94,11 @@ function openMenu() {
         } else {
             enableBodyScroll();
         }
+    });
+}
+
+function hidePreloader() {
+    $(window).on('load', function() {
+        $('.preloader').fadeOut();
     });
 }

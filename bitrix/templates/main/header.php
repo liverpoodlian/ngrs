@@ -15,6 +15,12 @@
 	</head>
 	<body>
 		<?$APPLICATION->ShowPanel();?>
+		<div class="preloader">
+			<div class="preloader__wrap">
+				<div class="preloader__square"></div>
+				<p class="preloader__text">Загрузка</p>
+			</div>
+		</div>
 		<header class="header">
 			<div class="header__left-col">
 				<a href="/" class="header__logo"></a>

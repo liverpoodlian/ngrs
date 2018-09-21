@@ -315,3 +315,87 @@
 		}
 	}
 }
+
+.preloader {
+	width: 100vw;
+	height: 100vh;
+	background-color: $color_fff;
+	z-index: 5;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__square {
+		width: 32px;
+		height: 32px;
+		background-color: $color_7297b9;
+		animation-name: preloader;
+		animation-duration: 4s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		transform-origin: center;
+		animation-delay: 1s;
+		margin-bottom: 15px;
+	}
+
+	&__text {
+		@include fontStyle($mont, 14px, 14px, 600);
+	}
+}
+
+@keyframes preloader {
+	0% {
+		transform: scale(1);
+		background-color: $color_7297b9;
+	}
+
+	12.5% {
+		transform: scale(0);
+		background-color: $color_7fbdc5;
+	}
+
+	25% {
+		transform: scale(1);
+		background-color: $color_7fbdc5;
+	}
+
+	37.5% {
+		transform: scale(0);
+		background-color: $color_a6c983;
+	}
+
+	50% {
+		transform: scale(1);
+		background-color: $color_a6c983;
+	}
+
+	62.5% {
+		transform: scale(0);
+		background-color: $color_f9d281;
+	}
+
+	75% {
+		transform: scale(1);
+		background-color: $color_f9d281;
+	}
+
+	87.5% {
+		transform: scale(0);
+		background-color: $color_7297b9;
+	}
+
+	100% {
+		transform: scale(1);
+		background-color: $color_7297b9;
+	}
+}
