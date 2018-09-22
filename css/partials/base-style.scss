@@ -509,7 +509,12 @@ br {
 	position: relative;
 	padding-top: 185px;
 	margin-bottom: 260px;
-	@include backgroundImage('/images/dots-back.png', top center, no-repeat, cover);
+	@include backgroundImage('/images/dots-back.png', top left, no-repeat, 120% auto);
+	animation-name: bg-anim;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-direction: alternate;
 
 	@media (max-width: $big-mobile_width) {
 		margin-bottom: 120px;
@@ -858,5 +863,17 @@ br {
 			height: 12px;
 			@include backgroundImage('/images/slider-arrow.png', center, no-repeat, contain);
 		}
+	}
+}
+
+@keyframes bg-anim {
+	0% {
+		background-size: 120% auto;
+		background-position: top left;
+	}
+
+	100% {
+		background-size: 120% auto;
+		background-position: top right;
 	}
 }
