@@ -20,6 +20,10 @@ br {
 	}
 }
 
+.canvas-link {
+	font-family: $bebe;
+}
+
 .content {
 	&:before {
 		@include before(0, 0);
