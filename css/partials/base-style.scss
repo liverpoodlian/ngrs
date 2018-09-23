@@ -269,9 +269,10 @@ br {
 
 	&--projects {
 		display: flex;
-		margin-bottom: 185px;
 		padding-top: 180px;
 		padding-bottom: 170px;
+		position: relative;
+		z-index: 2;
 
 		@media (max-width: $laptop_width) {
 			flex-direction: column;
@@ -502,7 +503,20 @@ br {
 }
 
 .clouds-bg {
+	position: relative;
+	overflow: hidden;
 	@include backgroundImage("/images/plumage.png", center, no-repeat, cover);
+	margin-bottom: 185px;
+
+	.feathers {
+		width: 100%;
+		height: auto;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		z-index: 1;
+		transform: translateY(-50%);
+	}
 }
 
 .dots-bg {

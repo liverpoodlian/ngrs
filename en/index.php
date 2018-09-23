@@ -83,6 +83,9 @@ $APPLICATION->SetTitle("NGRS");
 	</div>
 </section>
 <div class="clouds-bg">
+	<video playsinline autoplay muted loop class="feathers">
+		<source src="/video/bg_feathers.mp4" type="video/mp4">
+	</video>
 	<section class="section section--projects">
 		<div class="section__text">
 			<h2 class="h2">Наши <br>проекты</h2>
