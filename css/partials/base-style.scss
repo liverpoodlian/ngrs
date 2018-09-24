@@ -216,11 +216,10 @@ br {
 			@media (max-width: $tablet_width) {
 				margin-top: 0;
 
-				img {
+				#myCanvas {
 					width: 100%;
 				}
-			}
-		}
+			}		}
 	}
 
 	&--where {
@@ -503,6 +502,10 @@ br {
 		right: 0;
 		transform: translateY(-50%);
 		z-index: 1;
+
+		@media (max-width: $tablet_width) {
+			transform: none;
+		}
 	}
 }
 
@@ -520,6 +523,12 @@ br {
 		left: 0;
 		z-index: 1;
 		transform: translateY(-50%);
+
+		@media (max-width: $smallpc_width) {
+			height: 130%;
+			width: auto;
+			left: -10%;
+		}
 	}
 }
 
@@ -536,7 +545,9 @@ br {
 
 	@media (max-width: $big-mobile_width) {
 		margin-bottom: 120px;
-		padding-top: 0;
+		padding-top: 50px;
+		background-size: cover;
+		animation-duration: 60s;
 	}
 
 	&:after {
@@ -886,12 +897,10 @@ br {
 
 @keyframes bg-anim {
 	0% {
-		background-size: 120% auto;
 		background-position: top left;
 	}
 
 	100% {
-		background-size: 120% auto;
 		background-position: top right;
 	}
 }
