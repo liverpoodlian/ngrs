@@ -69,7 +69,18 @@ $APPLICATION->SetTitle("NGRS");
 			<h2 class="h2">Кого мы ищем</h2>
 		</div>
 		<div class="section__description">
-			<img src="/images/stack.png">
+			<canvas width="550" height="315" id="myCanvas">
+				<ul>
+					<li><a class="canvas-link">Java</a></li>
+					<li><a class="canvas-link">SAP</a></li>
+					<li><a class="canvas-link">React</a></li>
+					<li><a class="canvas-link">Python</a></li>
+					<li><a class="canvas-link">Blockchain</a></li>
+					<li><a class="canvas-link">CSS</a></li>
+					<li><a class="canvas-link">PHP</a></li>
+					<li><a class="canvas-link">C++</a></li>
+				</ul>
+			</canvas>
 		</div>
 	</section>
 </div>
@@ -83,6 +94,9 @@ $APPLICATION->SetTitle("NGRS");
 	</div>
 </section>
 <div class="clouds-bg">
+	<video playsinline autoplay muted loop class="feathers">
+		<source src="/video/bg_feathers.mp4" type="video/mp4">
+	</video>
 	<section class="section section--projects">
 		<div class="section__text">
 			<h2 class="h2">Наши <br>проекты</h2>

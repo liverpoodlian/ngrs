@@ -20,6 +20,10 @@ br {
 	}
 }
 
+.canvas-link {
+	font-family: $bebe;
+}
+
 .content {
 	&:before {
 		@include before(0, 0);
@@ -212,11 +216,10 @@ br {
 			@media (max-width: $tablet_width) {
 				margin-top: 0;
 
-				img {
+				#myCanvas {
 					width: 100%;
 				}
-			}
-		}
+			}		}
 	}
 
 	&--where {
@@ -269,9 +272,10 @@ br {
 
 	&--projects {
 		display: flex;
-		margin-bottom: 185px;
 		padding-top: 180px;
 		padding-bottom: 170px;
+		position: relative;
+		z-index: 2;
 
 		@media (max-width: $laptop_width) {
 			flex-direction: column;
@@ -498,22 +502,52 @@ br {
 		right: 0;
 		transform: translateY(-50%);
 		z-index: 1;
+
+		@media (max-width: $tablet_width) {
+			transform: none;
+		}
 	}
 }
 
 .clouds-bg {
+	position: relative;
+	overflow: hidden;
 	@include backgroundImage("/images/plumage.png", center, no-repeat, cover);
+	margin-bottom: 185px;
+
+	.feathers {
+		width: 100%;
+		height: auto;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		z-index: 1;
+		transform: translateY(-50%);
+
+		@media (max-width: $smallpc_width) {
+			height: 130%;
+			width: auto;
+			left: -10%;
+		}
+	}
 }
 
 .dots-bg {
 	position: relative;
 	padding-top: 185px;
 	margin-bottom: 260px;
-	@include backgroundImage('/images/dots-back.png', top center, no-repeat, cover);
+	@include backgroundImage('/images/dots-back.png', top left, no-repeat, 120% auto);
+	animation-name: bg-anim;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-direction: alternate;
 
 	@media (max-width: $big-mobile_width) {
 		margin-bottom: 120px;
-		padding-top: 0;
+		padding-top: 50px;
+		background-size: cover;
+		animation-duration: 60s;
 	}
 
 	&:after {
@@ -858,5 +892,15 @@ br {
 			height: 12px;
 			@include backgroundImage('/images/slider-arrow.png', center, no-repeat, contain);
 		}
+	}
+}
+
+@keyframes bg-anim {
+	0% {
+		background-position: top left;
+	}
+
+	100% {
+		background-position: top right;
 	}
 }

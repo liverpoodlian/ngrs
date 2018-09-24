@@ -5,6 +5,8 @@ $(function() {
     initReviewsSlider();
     openMenu();
     hidePreloader();
+    initTags();
+    startTags();
 });
 
 function checkOS() {
@@ -101,4 +103,32 @@ function hidePreloader() {
     $(window).on('load', function() {
         $('.preloader').fadeOut();
     });
+}
+
+function initTags() {
+    $(window).on('load', function() {
+        try {
+            $('#myCanvas').find('a').each(function() {
+                $(this).css('font-size', Math.floor(Math.random() * 60) + 20);
+            });
+            var options = {
+                textColour: '#4a4b4c',
+                textFont: 'Bebas',
+                textHeight: 60,
+                outlineColour: 'transparent',
+                outlineThickness: 0,
+                maxSpeed: 0.03,
+                depth: 0.5
+            }
+            TagCanvas.Start('myCanvas', '', options);
+        } catch(e) {
+            $('#myCanvas').style.display = 'none';
+        }
+    });
+}
+
+function startTags() {
+    if(!$('#myCanvas').tagcanvas()) {
+        $('#myCanvas').hide();
+    }
 }
