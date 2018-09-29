@@ -32,6 +32,10 @@ br {
 		height: 1400px;
 		pointer-events: none;
 
+		@media (max-width: $tablet_width) {
+			height: 1110px;
+		}
+
 		@media (max-width: $s_mobile_width) {
 			height: 1100px;
 		}
@@ -132,9 +136,14 @@ br {
 			height: 745px;
 			pointer-events: none;
 
+			@media (max-width: $tablet_width) {
+				top: -170px;
+			}
+
 			@media (max-width: $s_mobile_width) {
 				background-size: 124%;
     			height: 825px;
+    			top: 0;
 			}
 
 			@media (max-width: $mobile_width) {
@@ -241,11 +250,6 @@ br {
 		.section__text {
 			max-width: 295px;
 			flex: 0 0 295px;
-			padding-top: 125px;
-
-			@media (max-width: $laptop_width) {
-				padding-top: 0;
-			}
 
 			@media (max-width: $tablet_width) {
 				flex: none;
@@ -441,6 +445,14 @@ br {
 	&__item {
 		margin-right: 45px;
 
+		&:first-child {
+			flex: 0 0 110px;
+
+			@media (max-width: $big-mobile_width) {
+				flex: none;
+			}
+		}
+
 		@media (max-width: $tablet_width) {
 			margin-right: 65px;
 		}
@@ -535,7 +547,7 @@ br {
 .dots-bg {
 	position: relative;
 	padding-top: 185px;
-	margin-bottom: 260px;
+	margin-bottom: 130px;
 	@include backgroundImage('/images/dots-back.png', top left, no-repeat, 120% auto);
 	animation-name: bg-anim;
 	animation-duration: 20s;
@@ -571,7 +583,7 @@ br {
 
 .services {
 	display: flex;
-	margin-bottom: 255px;
+	margin-bottom: 120px;
 
 	@media (max-width: $big-mobile_width) {
 		flex-direction: column;
@@ -728,7 +740,7 @@ br {
 	}
 
 	.slick-dots {
-		bottom: -85px;
+		bottom: 0;
 
 		@media (max-width: $big-mobile_width) {
 			bottom: -45px;
@@ -893,6 +905,31 @@ br {
 			@include backgroundImage('/images/slider-arrow.png', center, no-repeat, contain);
 		}
 	}
+}
+
+.downArrow{
+	position: absolute;
+	bottom: 20%;
+	left: 50%;
+	z-index: 2;
+
+	@media (max-width: $tablet_width) {
+		display: none;
+	}
+}
+.bounce {
+	animation: bounce 3s infinite;
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 
 @keyframes bg-anim {

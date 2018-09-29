@@ -118,7 +118,8 @@ function initTags() {
                 outlineColour: 'transparent',
                 outlineThickness: 0,
                 maxSpeed: 0.03,
-                depth: 0.5
+                depth: 0.5,
+                wheelZoom: false
             }
             TagCanvas.Start('myCanvas', '', options);
         } catch(e) {

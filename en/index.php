@@ -5,6 +5,9 @@ $APPLICATION->SetTitle("NGRS");
 <section id="main" class="section section--main">
 	<h1 class="h1">NGRS – поиск и привлечение талантов</h1>
 	<p class="paragraph">Next Generation Recruitment Services <br>Мы помогаем бизнесу расти</p>
+	<div class="downArrow bounce">
+		<img width="40" height="40" alt="" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDMyIiBoZWlnaHQ9IjMycHgiIGlkPSLQodC70L7QuV8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik0yNC4yODUsMTEuMjg0TDE2LDE5LjU3MWwtOC4yODUtOC4yODhjLTAuMzk1LTAuMzk1LTEuMDM0LTAuMzk1LTEuNDI5LDAgIGMtMC4zOTQsMC4zOTUtMC4zOTQsMS4wMzUsMCwxLjQzbDguOTk5LDkuMDAybDAsMGwwLDBjMC4zOTQsMC4zOTUsMS4wMzQsMC4zOTUsMS40MjgsMGw4Ljk5OS05LjAwMiAgYzAuMzk0LTAuMzk1LDAuMzk0LTEuMDM2LDAtMS40MzFDMjUuMzE5LDEwLjg4OSwyNC42NzksMTAuODg5LDI0LjI4NSwxMS4yODR6IiBmaWxsPSIjMTIxMzEzIiBpZD0iRXhwYW5kX01vcmUiLz48Zy8+PGcvPjxnLz48Zy8+PGcvPjxnLz48L3N2Zz4=" />
+	</div>
 </section>
 <section id="about" class="section section--about">
 	<div class="section__text">
@@ -69,7 +72,7 @@ $APPLICATION->SetTitle("NGRS");
 			<h2 class="h2">Кого мы ищем</h2>
 		</div>
 		<div class="section__description">
-			<canvas width="550" height="315" id="myCanvas">
+			<canvas width="645" height="370" id="myCanvas">
 				<ul>
 					<li><a class="canvas-link">Java</a></li>
 					<li><a class="canvas-link">SAP</a></li>
@@ -97,7 +100,7 @@ $APPLICATION->SetTitle("NGRS");
 	<video playsinline autoplay muted loop class="feathers">
 		<source src="/video/bg_feathers.mp4" type="video/mp4">
 	</video>
-	<section class="section section--projects">
+	<section id="projects" class="section section--projects">
 		<div class="section__text">
 			<h2 class="h2">Наши <br>проекты</h2>
 			<p class="paragraph paragraph--italic">мы наняли 2000+ сотрудников для более чем 100 клиентов</p>
@@ -159,12 +162,11 @@ $APPLICATION->SetTitle("NGRS");
 					"SORT_ORDER2" => "ASC"
 				)
 			);?>
-			<p class="paragraph">От 100, до 500 сотрудников (число нанятых сотрудников)</p>
 		</div>
 	</section>
 </div>
 <div class="lines-bg">
-	<section class="section section--reviews">
+	<section id="recommendations" class="section section--reviews">
 		<h2 class="h2">О нас <br>говорят</h2>
 		<?$APPLICATION->IncludeComponent(
 			"bitrix:news.list",
@@ -226,7 +228,7 @@ $APPLICATION->SetTitle("NGRS");
 </div>
 <section id="contacts" class="section section--contacts">
 	<div class="section__text">
-		<h2 class="h2">Получить консультацию по нашим сервисам</h2>
+		<h2 class="h2">Контакты</h2>
 		<div class="socials">
 			<a href="https://www.linkedin.com/company/2223482" target="_blank" class="socials__item socials__item--linkedin"></a>
 			<a href="https://www.instagram.com/ngrs_consulting/" target="_blank" class="socials__item socials__item--instagram"></a>
@@ -234,13 +236,13 @@ $APPLICATION->SetTitle("NGRS");
 		</div>
 		<div class="contact-mobile">
 			<a class="contact-phone" href="tel:+74956467075">+7 (495) 646-70-75</a>
-			<a class="contact-email" href="mailto:contacts@ngrs.com">contacts@ngrs.com</a>
+			<a class="contact-email" href="mailto:info@ngrs.com">info@ngrs.com</a>
 		</div>
 		<p class="copyright">2018 © NGRS – все права защищены</p>
 	</div>
 	<div class="section__description">
 		<a class="contact-phone" href="tel:+74956467075">+7 (495) 646-70-75</a>
-		<a class="contact-email" href="mailto:contacts@ngrs.com">contacts@ngrs.com</a>
+		<a class="contact-email" href="mailto:info@ngrs.com">info@ngrs.com</a>
 	</div>
 </section>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

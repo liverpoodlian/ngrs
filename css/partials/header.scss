@@ -136,7 +136,11 @@
 
 	&__langs {
 		@media (max-width: $laptop_width) {
-			display: none;
+			margin-right: 30px;
+		}
+
+		@media (max-width: $mobile_width) {
+			margin-right: 10px;
 		}
 	}
 
@@ -209,7 +213,7 @@
 	&__burger-item {
 		height: 3px;
 		width: 25px;
-		background-color: $color_F8CA6C;
+		background-color: $color_565656;
 		margin-bottom: 5px;
 		display: block;
 		pointer-events: none;
@@ -223,21 +227,17 @@
 	&--active {
 		display: block;
 		position: fixed;
-		top: 120px;
+		top: 18vh;
 		left: 0;
 		background-color: $color_fff;
 		z-index: 3;
 		width: 100vw;
-		height: calc(100vh - 120px);
+		height: 82vh;
 
 		@media (max-width: $smallpc_width) {
 			padding-left: 50px;
 			padding-right: 50px;
 			padding-top: 25px;
-		}
-
-		@media (max-width: $s_mobile_width) {
-			margin-bottom: 60px;
 		}
 
 		@media (max-width: $mobile_width) {
@@ -250,10 +250,11 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		margin-bottom: 10vh;
 	}
 
 	.header-menu__link {
-		margin-bottom: 40px;
+		margin-bottom: 6vh;
 
 		&:last-child {
 			margin-bottom: 0;
@@ -279,7 +280,7 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%) scale(.7);
 		z-index: 2;
 
 		@media (max-width: $big-mobile_width) {
@@ -290,7 +291,7 @@
 }
 
 .video-slider {
-	height: 340px;
+	height: 200px;
 	z-index: 1;
 
 	@media (max-width: $big-mobile_width) {
@@ -298,7 +299,7 @@
 	}
 
 	&__item {
-		height: 340px;
+		height: 200px;
 		overflow: hidden;
 		position: relative;
 
