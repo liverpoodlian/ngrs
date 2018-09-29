@@ -112,7 +112,10 @@ function buildJs(src, dest) {
 function buildCss(src, dest) {
     return gulp.src(src)
         .pipe(sass({ errLogToConsole: true }))
-        .pipe(prefixer())
+        .pipe(prefixer({
+        	browsers: ['last 3 versions'],
+        	cascade: false
+        }))
         .pipe(cleanCSS())
         .pipe(hash({ template: FILE_HASH_TEMPLATE }))
         .pipe(through.obj((chunk, enc, cb) => {
