@@ -244,7 +244,8 @@
 	display: none;
 
 	&--active {
-		display: block;
+		display: flex;
+		align-items: center;
 		position: fixed;
 		top: 18vh;
 		left: 0;
@@ -254,9 +255,7 @@
 		height: 82vh;
 
 		@media (max-width: $smallpc_width) {
-			padding-left: 50px;
-			padding-right: 50px;
-			padding-top: 25px;
+			padding: 25px 50px;
 		}
 
 		@media (max-width: $mobile_width) {
