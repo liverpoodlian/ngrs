@@ -53,7 +53,6 @@
 							<a href="/#recommendations" class="header-menu__link">Рекомендации</a>
 							<a href="/#contacts" class="header-menu__link">Контакты</a>
 						</nav>
-						<a href="tel:+74956467075" class="header__phone">+7 (495) 646-70-75</a>
 					</div>
 				</div>
 			</div>

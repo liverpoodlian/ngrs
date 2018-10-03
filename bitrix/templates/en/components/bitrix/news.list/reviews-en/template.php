@@ -21,7 +21,6 @@ $this->setFrameMode(true);
 				<div class="reviews-slider__about">
 					<p class="reviews-slider__fio"><?=$arItem["NAME"]?></p>
 					<p class="reviews-slider__position"><?=$arItem["PROPERTIES"]["POSITION"]["VALUE"]?></p>
-					<p class="reviews-slider__info"><?=$arItem["PROPERTIES"]["INFO"]["VALUE"]?></p>
 				</div>
 			</div>
 			<div class="reviews-slider__text-wrap">

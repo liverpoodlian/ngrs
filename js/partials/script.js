@@ -7,6 +7,7 @@ $(function() {
     hidePreloader();
     initTags();
     startTags();
+    clickOnMobileMenuLink();
 });
 
 function checkOS() {
@@ -88,15 +89,19 @@ function initReviewsSlider() {
 
 function openMenu() {
     $('.header__burger').on('click', function(e) {
-        $('.header__burger').toggleClass('header__burger--opened');
-        $('.menu-mobile').toggleClass('menu-mobile--active');
-
-        if($('.menu-mobile').hasClass('menu-mobile--active')) {
-            disableBodyScroll();
-        } else {
-            enableBodyScroll();
-        }
+        toggleMobileMenu();
     });
+}
+
+function toggleMobileMenu() {
+    $('.header__burger').toggleClass('header__burger--opened');
+    $('.menu-mobile').toggleClass('menu-mobile--active');
+
+    if($('.menu-mobile').hasClass('menu-mobile--active')) {
+        disableBodyScroll();
+    } else {
+        enableBodyScroll();
+    }
 }
 
 function hidePreloader() {
@@ -132,4 +137,10 @@ function startTags() {
     if(!$('#myCanvas').tagcanvas()) {
         $('#myCanvas').hide();
     }
+}
+
+function clickOnMobileMenuLink() {
+    $('.menu-mobile').find('.header-menu__link').on('click', function() {
+        toggleMobileMenu();
+    });
 }
