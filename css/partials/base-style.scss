@@ -605,7 +605,7 @@ br {
 
 		@media (max-width: $big-mobile_width) {
 			width: 100%;
-			flex: 0 0 100%;
+			flex: none;
 			margin-right: 0;
 			margin-bottom: 75px;
 		}
@@ -928,7 +928,7 @@ br {
 		top: 53%;
 	}
 
-	@media (max-height: 700px) {
+	@media (max-height: 800px) {
 		top: 65%;
 	}
 
