@@ -903,37 +903,12 @@ br {
 }
 
 .downArrow{
-	position: absolute;
-	top: 47%;
-	left: calc((100% - 1400px) / 2);
+	position: relative;
+	top: 40px;
 	z-index: 2;
-
-	@media (max-width: $big-notebook_width) {
-		left: 100px;
-	}
-
-	@media (max-width: $smallpc_width) {
-		left: 50px;
-	}
-
-	@media (max-width: $tablet_width) {
-		top: 45%;
-	}
 
 	@media (max-width: $big-mobile_width) {
 		display: none;
-	}
-
-	@media (max-height: 900px) {
-		top: 53%;
-	}
-
-	@media (max-height: 800px) {
-		top: 65%;
-	}
-
-	@media (max-height: 650px) {
-		top: 70%;
 	}
 }
 .bounce {
